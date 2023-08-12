@@ -13,3 +13,19 @@
 // buttonEl.addEventListener('click', addGoal);
 
 
+const app = Vue.createApp({
+    data() {
+      return {
+        enteredValue: '',
+        goals: []
+      };
+    },
+    methods: {
+      addGoal() {
+        this.goals.push({ id: Date.now(), text: this.enteredValue });
+        this.enteredValue = '';
+      }
+    }
+  });
+
+  app.mount('#app');
