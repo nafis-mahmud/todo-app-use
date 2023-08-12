@@ -11,31 +11,14 @@
     <div>
       <label for="goal">Goal</label>
       <input v-model="enteredValue" type="text" id="goal" />
-      <button @click="addGoal">Add Goal</button>
+      <button v-on:click="addGoal">Add Goal</button>
     </div>
 
     <ul>
-      <li v-for="goal in goals" :key="goal.id">{{ goal.text }}</li>
+      <li v-for="goal in goals" >{{ goal }}</li>
     </ul>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script>
-    const app = Vue.createApp({
-      data() {
-        return {
-          enteredValue: '',
-          goals: []
-        };
-      },
-      methods: {
-        addGoal() {
-          this.goals.push({ id: Date.now(), text: this.enteredValue });
-          this.enteredValue = '';
-        }
-      }
-    });
-
-    app.mount('#app');
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

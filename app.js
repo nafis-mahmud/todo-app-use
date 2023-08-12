@@ -12,20 +12,44 @@
 
 // buttonEl.addEventListener('click', addGoal);
 
+//-----------------------vue-------------------
+// const app = Vue.createApp({
+//     data() {
+//       return {
+//         enteredValue: '',
+//         goals: []
+//       };
+//     },
+//     methods: {
+//       addGoal() {
+//         this.goals.push({ id: Date.now(), text: this.enteredValue });
+//         this.enteredValue = '';
+//       }
+//     }
+//   });
+
+//   app.mount('#app');
+
+
+
+
+
+
 
 const app = Vue.createApp({
     data() {
-      return {
-        enteredValue: '',
-        goals: []
-      };
+        return {
+            goals: [],
+            enteredValue: ''
+        };
     },
     methods: {
-      addGoal() {
-        this.goals.push({ id: Date.now(), text: this.enteredValue });
-        this.enteredValue = '';
-      }
+        addGoal() {
+            this.goals.push(this.enteredValue);
+            this.enteredValue = '';
+        }
     }
-  });
+});
 
-  app.mount('#app');
+t
+app.mount('#app');
