@@ -51,5 +51,5 @@ const app = Vue.createApp({
     }
 });
 
-t
+
 app.mount('#app');
